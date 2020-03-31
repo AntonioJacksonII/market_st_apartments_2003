@@ -40,4 +40,12 @@ class Building
                           1 => bedrooms_1.map {|bedroom_1| bedroom_1.number}}
     units_by_bedrooms
   end
+
+  def annual_breakdown
+    breakdown = {}
+    rented_units.map do |rented_unit|
+      breakdown[rented_unit.renter.name] = rented_unit.monthly_rent * 12
+    end
+    breakdown
+  end
 end
