@@ -39,12 +39,5 @@ class Building
                           2 => bedrooms_2.map {|bedroom_2| bedroom_2.number},
                           1 => bedrooms_1.map {|bedroom_1| bedroom_1.number}}
     units_by_bedrooms
-    # bedrooms = @units.map { |unit| unit.bedrooms}.uniq
-    # matches = bedrooms.map do |bedroom|
-    #   @units.find_all do |unit|
-    #     unit.bedrooms == bedroom
-    #   end
-    # end
-    # matches
   end
 end
